@@ -10,6 +10,17 @@ We encode graphs as stacks of 2D histograms of their node embeddings, and pass t
 * **reduced time complexity at the graph level**: node2vec is linear in the number of nodes (GKs are polynomial) -> we can process bigger graphs
 * **reduced time complexity at the collection level**: the time required to process a graph with a 2D CNN is constant (all images have same dimension for a given dataset), and the time required to go through the entire dataset with a 2D CNN grows linearly with the size of the dataset (GKs take quadratic time to compute kernel matrix, then finding the support vectors is again quadratic) -> we can process bigger datasets
 
+### Use
+* `get_node2vec.py` computes the node2vec embeddings of the graphs from their adjacency matrices (parallelized over graphs)
+* `get_histograms.py` computes the image representations of the graphs (stacks of 2D histograms) from their node2vec embeddings (parallelized over graphs)
+* `main.py` reproduces the experiments (classification of graphs as images with a 2D CNN architecture, using a 10-fold cross validation scheme)
+* `main_data_augmentation.py` is like `main.py`, but it implements the data augmentation scheme described in the paper (smoothed bootstrap)
+
+Command line examples and descriptions of the parameters are available within each script.
+
+### Results
+The results reported in the paper (without data augmentation) are available in the `/datasets/results/` subdirectory, with slight variations due to the stochasticity of the approach.
+
 ### Setup 
 Code was developed and tested under Ubuntu 16.04.2 LTS 64-bit operating system and Python 2.7 with [Keras 1.2.2](https://faroit.github.io/keras-docs/1.2.2/) and tensorflow 1.1.0 backend.
 
