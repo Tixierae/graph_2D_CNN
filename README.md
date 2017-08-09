@@ -19,5 +19,5 @@ Code was developed and tested under Ubuntu 16.04.2 LTS 64-bit operating system a
 * numpy 1.11.0
 * multiprocessing
 * functools
-* * json
+* json
 * argparse
