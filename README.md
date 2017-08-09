@@ -21,3 +21,10 @@ Code was developed and tested under Ubuntu 16.04.2 LTS 64-bit operating system a
 * functools
 * json
 * argparse
+
+### Correspondence between names of datasets in the paper and in the code (paper -> code)
+* IMDB-B -> imdb_action_romance
+* COLLAB -> collab
+* REDDIT-B -> reddit_iama_askreddit_atheism_trollx
+* REDDIT-5K -> reddit_multi_5K
+* REDDIT-12K -> reddit_subreddit_10K
