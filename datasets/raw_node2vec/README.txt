@@ -1,0 +1,1 @@
+# pre-computed node2vec embeddings can be downloaded at: https://www.dropbox.com/s/acdz80qu7pod88l/raw_node2vec.zip?dl=0

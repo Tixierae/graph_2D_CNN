@@ -1,0 +1,16 @@
+{
+    "batch_size": 32, 
+    "dataset": "reddit_multi_5K", 
+    "definition": 9, 
+    "dim_ordering": "th", 
+    "drop_rate": 0.3, 
+    "my_optimizer": "adam", 
+    "my_patience": 5, 
+    "n_channels": 2, 
+    "n_folds": 10, 
+    "n_repeats": 3, 
+    "nb_epochs": 50, 
+    "p": "4", 
+    "path_root": "/home/antoine/Desktop/graph_2D_CNN/datasets/", 
+    "q": "0.25"
+}
