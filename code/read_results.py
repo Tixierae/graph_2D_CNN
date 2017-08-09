@@ -2,7 +2,7 @@ import os
 import json
 import numpy as np
 
-path_to_results = 'C:/Users/mvazirg/Desktop/inspect_code_temp/results/'
+path_to_results = './results/'
 
 results_names = os.listdir(path_to_results)
 

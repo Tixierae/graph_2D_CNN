@@ -19,7 +19,7 @@ We encode graphs as stacks of 2D histograms of their node embeddings, and pass t
 Command line examples and descriptions of the parameters are available within each script.
 
 ### Results
-The results reported in the paper (without data augmentation) are available in the `/datasets/results/` subdirectory, with slight variations due to the stochasticity of the approach.
+The results reported in the paper (without data augmentation) are available in the `/datasets/results/` subdirectory, with slight variations due to the stochasticity of the approach. You can read them using the `read_results.py` script.
 
 ### Setup 
 Code was developed and tested under Ubuntu 16.04.2 LTS 64-bit operating system and Python 2.7 with [Keras 1.2.2](https://faroit.github.io/keras-docs/1.2.2/) and tensorflow 1.1.0 backend.
