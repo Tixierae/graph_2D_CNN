@@ -10,7 +10,7 @@ We encode graphs as stacks of 2D histograms of their node embeddings, and pass t
 * **reduced time complexity at the graph level**: node2vec is linear in the number of nodes (GKs are polynomial) -> we can process bigger graphs
 * **reduced time complexity at the collection level**: the time required to process a graph with a 2D CNN is constant (all images have same dimension for a given dataset), and the time required to go through the entire dataset with a 2D CNN grows linearly with the size of the dataset (GKs take quadratic time to compute kernel matrix, then finding the support vectors is again quadratic) -> we can process bigger datasets
 
-### Use
+### Usage
 * `get_node2vec.py` computes the node2vec embeddings of the graphs from their adjacency matrices (parallelized over graphs)
 * `get_histograms.py` computes the image representations of the graphs (stacks of 2D histograms) from their node2vec embeddings (parallelized over graphs)
 * `main.py` reproduces the experiments (classification of graphs as images with a 2D CNN architecture, using a 10-fold cross validation scheme)
