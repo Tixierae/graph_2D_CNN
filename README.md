@@ -11,6 +11,7 @@ We encode graphs as stacks of 2D histograms of their node embeddings, and pass t
 * **reduced time complexity at the collection level**: the time required to process a graph with a 2D CNN is constant (all images have same dimension for a given dataset), and the time required to go through the entire dataset with a 2D CNN grows linearly with the size of the dataset (GKs take quadratic time to compute kernel matrix, then finding the support vectors is again quadratic) -> we can process bigger datasets
 
 ### Results
+10-fold CV average test set classification accuracy of state-of-the-art graph kernel and graph CNN baselines (top), vs our 2D CNN approach (bottom):
 ![alt text](https://github.com/Tixierae/graph_2D_CNN/raw/master/results_graph_cnn_github.png)
 
 The results reported in the paper (without data augmentation) are available in the `/datasets/results/` subdirectory, with slight variations due to the stochasticity of the approach. You can read them using the `read_results.py` script.
