@@ -2,24 +2,32 @@
 This repo provides the code and datasets used in the paper [Classifying graphs as images with Convolutional Neural Networks](https://arxiv.org/abs/1708.02218) (Tixier, Nikolentzos, Meladianos and Vazirgiannis, 2017)
 
 ### Idea
-We encode graphs as stacks of 2D histograms of their node embeddings, and pass them to a classical 2D CNN architecture designed for images. Despite its simplicity, our method proves very competitive to state-of-the-art graph kernels, and even outperforms them by a wide margin on some datasets.
+We encode graphs as stacks of 2D histograms of their node embeddings, and pass them to a classical 2D CNN architecture designed for images. The *bins* of the histograms can be viewed as *pixels*, and the value of a given pixel is the count of the number of nodes falling into the bin.
 
-### Advantages over graph kernels + SVM (GK+SVM)
-* **better accuracy**: CNNs learn their own features directly from the raw data during training to optimize performance on the downstream task (GKs compute similarity *a priori*)
-* **better accuracy**: we compute images of graphs from their node embeddings (obtained via node2vec), so we capture both *local* and *global* information about the networks (most GKs, based on substructures, capture only local information)
-* **reduced time complexity at the graph level**: node2vec is linear in the number of nodes (GKs are polynomial) -> we can process bigger graphs
-* **reduced time complexity at the collection level**: the time required to process a graph with a 2D CNN is constant (all images have same dimension for a given dataset), and the time required to go through the entire dataset with a 2D CNN grows linearly with the size of the dataset (GKs take quadratic time to compute kernel matrix, then finding the support vectors is again quadratic) -> we can process bigger datasets
+For instance, below are the node embeddings and corresponding bivariate histograms for graph ID #10001 (577 nodes, 1320 edges) of the REDDIT-12K dataset:
+![alt text](https://github.com/Tixierae/graph_2D_CNN/raw/master/image_example_graph_cnn_github.png)
+The full image representation of a graph is given by stacking its n_channels bivariate histograms (where n_channels can be 2,5...). Each pixel is thus associated with a n_channels-dimensional vector of counts.
 
 ### Results
+Despite its simplicity, our method proves very competitive to state-of-the-art graph kernels, and even outperforms them by a wide margin on some datasets. 
+
 10-fold CV average test set classification accuracy of state-of-the-art graph kernel and graph CNN baselines (top), vs our 2D CNN approach (bottom):
 ![alt text](https://github.com/Tixierae/graph_2D_CNN/raw/master/results_graph_cnn_github.png)
 
 The results reported in the paper (without data augmentation) are available in the `/datasets/results/` subdirectory, with slight variations due to the stochasticity of the approach. You can read them using the `read_results.py` script.
 
+### Advantages over graph kernels + SVM (GK+SVM)
+We can summarize the advantages of our approach as follows:
+* **better accuracy**: CNNs learn their own features directly from the raw data during training to optimize performance on the downstream task (whereas GKs compute similarity *a priori*)
+* **better accuracy**: we compute images of graphs from their node embeddings (obtained via node2vec), so we capture both *local* and *global* information about the networks (whereas most GKs, based on substructures, capture only local information)
+* **reduced time complexity at the graph level**: node2vec is linear in the number of nodes (whereas most GKs are polynomial) -> we can process bigger graphs
+* **reduced time complexity at the collection level**: the time required to process a graph with a 2D CNN is constant (all images have same dimension for a given dataset), and the time required to go through the entire dataset with a 2D CNN grows linearly with the size of the dataset (whereas GKs take quadratic time to compute kernel matrix, then finding the support vectors is again quadratic) -> we can process bigger datasets
+
+
 ### Use
 * `get_node2vec.py` computes the node2vec embeddings of the graphs from their adjacency matrices (parallelized over graphs)
 * `get_histograms.py` computes the image representations of the graphs (stacks of 2D histograms) from their node2vec embeddings (parallelized over graphs)
-* `main.py` reproduces the experiments (classification of graphs as images with a 2D CNN architecture, using a 10-fold cross validation scheme)
+* `main.py` reproduces the experiments in the paper (classification of graphs as images with a 2D CNN architecture, using a 10-fold cross validation scheme)
 * `main_data_augmentation.py` is like `main.py`, but it implements the data augmentation scheme described in the paper (smoothed bootstrap)
 
 Command line examples and descriptions of the parameters are available within each script.
