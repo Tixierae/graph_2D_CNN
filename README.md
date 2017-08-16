@@ -1,5 +1,5 @@
 ### What is this repo for?
-This repo provides the code and datasets used in the paper [Classifying graphs as images with Convolutional Neural Networks](https://arxiv.org/abs/1708.02218) (Tixier, Nikolentzos, Meladianos and Vazirgiannis, 2017)
+This repo provides the code and datasets used in the paper [Classifying graphs as images with Convolutional Neural Networks](https://arxiv.org/abs/1708.02218) (Tixier, Nikolentzos, Meladianos and Vazirgiannis, 2017). As its name suggests, the paper introduces a technique to perform graph classification with standard Convolutional Neural Networks for images (2D CNNs).
 
 ### Idea
 We encode graphs as stacks of 2D histograms of their node embeddings, and pass them to a classical 2D CNN architecture designed for images. The *bins* of the histograms can be viewed as *pixels*, and the value of a given pixel is the number of nodes falling into the associated bin.
