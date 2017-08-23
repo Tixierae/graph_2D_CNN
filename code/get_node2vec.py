@@ -102,7 +102,6 @@ def main():
     my_date_time = '_'.join(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S").split())
     
     file_names = os.listdir(path_read + dataset + '/')
-    file_names = file_names[:32]
     file_names.sort(key=natural_keys)
     print '===== number of graphs: =====', len(file_names)
     print '*** head ***'
