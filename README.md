@@ -1,7 +1,7 @@
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/graph-classification-with-2d-convolutional/graph-classification-on-collab)](https://paperswithcode.com/sota/graph-classification-on-collab?p=graph-classification-with-2d-convolutional) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/graph-classification-with-2d-convolutional/graph-classification-on-re-m12k)](https://paperswithcode.com/sota/graph-classification-on-re-m12k?p=graph-classification-with-2d-convolutional) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/graph-classification-with-2d-convolutional/graph-classification-on-re-m5k)](https://paperswithcode.com/sota/graph-classification-on-re-m5k?p=graph-classification-with-2d-convolutional) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/graph-classification-with-2d-convolutional/graph-classification-on-imdb-b)](https://paperswithcode.com/sota/graph-classification-on-imdb-b?p=graph-classification-with-2d-convolutional)
 
 ### What is this repo for?
-This repo provides the code and datasets used in the paper [Classifying graphs as images with Convolutional Neural Networks](https://arxiv.org/abs/1708.02218) (Tixier, Nikolentzos, Meladianos and Vazirgiannis, 2017). As its name suggests, the paper introduces a technique to perform graph classification with standard Convolutional Neural Networks for images (2D CNNs).
+This repo provides the code and datasets used in the paper [Classifying graphs as images with Convolutional Neural Networks](https://arxiv.org/abs/1708.02218) (Tixier, Nikolentzos, Meladianos and Vazirgiannis, 2017). Note that the paper was published at the ICANN 2019 conference under the title *Graph classification with 2D convolutional neural networks*. As its name suggests, the paper introduces a technique to perform graph classification with standard Convolutional Neural Networks for images (2D CNNs).
 
 ### Idea
 We encode graphs as stacks of 2D histograms of their node embeddings, and pass them to a classical 2D CNN architecture designed for images. The *bins* of the histograms can be viewed as *pixels*, and the value of a given pixel is the number of nodes falling into the associated bin.
@@ -54,6 +54,19 @@ Code was developed and tested under Ubuntu 16.04.2 LTS 64-bit operating system a
 * REDDIT-12K -> reddit_subreddit_10K
 
 ### Cite
+conference version (ICANN 2019):
+````
+@inproceedings{tixier2019graph,
+  title={Graph classification with 2d convolutional neural networks},
+  author={Tixier, Antoine J-P and Nikolentzos, Giannis and Meladianos, Polykarpos and Vazirgiannis, Michalis},
+  booktitle={International Conference on Artificial Neural Networks},
+  pages={578--593},
+  year={2019},
+  organization={Springer}
+}
+````
+
+pre-print version (2017):
 ````
 @article{tixier2017classifying,
   title={Classifying Graphs as Images with Convolutional Neural Networks},
