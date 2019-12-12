@@ -1,3 +1,5 @@
+# Graph classification with 2D CNNs ![GitHub stars](https://img.shields.io/github/stars/tixierae/graph_2D_CNN.svg?style=plastic) ![GitHub forks](https://img.shields.io/github/forks/tixierae/graph_2D_CNN.svg?color=blue&style=plastic)
+
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/graph-classification-with-2d-convolutional/graph-classification-on-collab)](https://paperswithcode.com/sota/graph-classification-on-collab?p=graph-classification-with-2d-convolutional) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/graph-classification-with-2d-convolutional/graph-classification-on-re-m12k)](https://paperswithcode.com/sota/graph-classification-on-re-m12k?p=graph-classification-with-2d-convolutional) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/graph-classification-with-2d-convolutional/graph-classification-on-re-m5k)](https://paperswithcode.com/sota/graph-classification-on-re-m5k?p=graph-classification-with-2d-convolutional) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/graph-classification-with-2d-convolutional/graph-classification-on-imdb-b)](https://paperswithcode.com/sota/graph-classification-on-imdb-b?p=graph-classification-with-2d-convolutional)
 
 ### What is this repo for?
@@ -54,7 +56,9 @@ Code was developed and tested under Ubuntu 16.04.2 LTS 64-bit operating system a
 * REDDIT-12K -> reddit_subreddit_10K
 
 ### Cite
-conference version (ICANN 2019):
+If you use some of the code in this repository in your work, please cite:
+
+Conference version (ICANN 2019):
 ````
 @inproceedings{tixier2019graph,
   title={Graph classification with 2d convolutional neural networks},
@@ -66,7 +70,7 @@ conference version (ICANN 2019):
 }
 ````
 
-pre-print version (2017):
+Pre-print version (2017):
 ````
 @article{tixier2017classifying,
   title={Classifying Graphs as Images with Convolutional Neural Networks},
