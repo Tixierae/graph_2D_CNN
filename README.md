@@ -59,7 +59,7 @@ Code was developed and tested under Ubuntu 16.04.2 LTS 64-bit operating system a
 If you use some of the code in this repository in your work, please cite:
 
 Conference version (ICANN 2019):
-````
+````BibTeX
 @inproceedings{tixier2019graph,
   title={Graph classification with 2d convolutional neural networks},
   author={Tixier, Antoine J-P and Nikolentzos, Giannis and Meladianos, Polykarpos and Vazirgiannis, Michalis},
@@ -71,7 +71,7 @@ Conference version (ICANN 2019):
 ````
 
 Pre-print version (2017):
-````
+````BibTeX
 @article{tixier2017classifying,
   title={Classifying Graphs as Images with Convolutional Neural Networks},
   author={Tixier, Antoine Jean-Pierre and Nikolentzos, Giannis and Meladianos, Polykarpos and Vazirgiannis, Michalis},
